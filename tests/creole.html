@@ -214,10 +214,11 @@ var tests = [
     input:  "<!-- comment <!-- nested comment -> -->",
     output: ""
   },
-  { // Template expansion, pending impl
-    name:   "Template elimination",
+  { // Template expansion
+    name:   "Template expansion",
     input:  "{{stub}}",
-    output: ""
+    output: "<h3>stub</h3>",
+    options: { template: function(name, options) { return "===" + name; } }
   },
   {
     name:   "Tables",
