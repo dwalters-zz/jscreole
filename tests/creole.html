@@ -189,6 +189,36 @@ var tests = [
     input:  "===Header",
     output: "<h3>Header</h3>"
   },
+  { // Classic style italic text
+    name:   "classic italic text",
+    input:  "''italic''",
+    output: "<em>text</em>"
+  },
+  { // Classic style bold text
+    name:   "classic bold text",
+    input:  "'''text'''",
+    output: "<strong>text</strong>"
+  },
+  { // Classic style bold and italic text
+    name:   "classic bold and italic text",
+    input:  "'''''text'''''",
+    output: "<strong><em>text</em></strong>"
+  },
+  { // Comment elimination
+    name:   "comment elimination",
+    input:  "<!-- comment -->",
+    output: ""
+  },
+  { // Multiple open comment elimination
+    name:   "multi open comment elimination",
+    input:  "<!-- comment <!-- nested comment -> -->",
+    output: ""
+  },
+  { // Template expansion, pending impl
+    name:   "Template elimination",
+    input:  "{{stub}}",
+    output: ""
+  },
   {
     name:   "Tables",
     input:  "| A | B |\n| C | D |",
