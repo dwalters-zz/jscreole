@@ -179,6 +179,16 @@ var tests = [
     input:  "====== Header ~",
     output: "<h6>Header ~</h6>"
   },
+  { // Test h3 without space
+    name:   "h3 without space",
+    input:  "===Header===",
+    output: "<h3>Header</h3>"
+  },
+  { // Test h3 without or ending
+    name:   "h3 without space no ending",
+    input:  "===Header",
+    output: "<h3>Header</h3>"
+  },
   {
     name:   "Tables",
     input:  "| A | B |\n| C | D |",
